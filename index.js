@@ -38,15 +38,22 @@ function init() {
     ]).then(function (response) {
         var data =`# Title
   ${response.title}
+# Table of Contents
+1. [ Description. ](#description)
+2. [ Installation. ](#installation)
+3. [ Usage. ](#usage)
+4. [ Contribution. ](#contribution)  
+5. [ Test. ](#test)  
+
 ## Description 
   ${response.description}
-## Installation Instructions
+## Installation
   ${response.installation}
-## Usage Information 
+## Usage 
   ${response.usage}
-## Contribution Guidelines
+## Contribution
   ${response.contribution}
-## Test Instructions:
+## Test
   ${response.test}`
         return fs.writeFile('readme-template.md', data, (err) => err ? console.error(err) : console.log('Success!'));
     }
