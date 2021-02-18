@@ -8,14 +8,46 @@ function init() {
             type: 'input',
             message: 'What is your title?',
             name: 'title',
+        },
+        {
+            type: 'input',
+            message: ' Give brife description?',
+            name: 'description',
+        },
+        {
+            type: 'input',
+            message: 'Give installation instructions?',
+            name: 'installation',
+        },
+        {
+            type: 'input',
+            message: 'Provide usage information:?',
+            name: 'usage',
+        },
+        {
+            type: 'input',
+            message: ' Tell more about contribution guidelines?',
+            name: 'contribution',
+        },
+        {
+            type: 'input',
+            message: 'Provide test instructions?',
+            name: 'test',
         }
 
     ]).then(function (response) {
-        var data = `# This is an <h1> tag
-${response.title}
-## This is an <h2> tag
-###### This is an <h6> tag
-        `
+        var data =`# Title
+  ${response.title}
+## Description 
+  ${response.description}
+## Installation Instructions
+  ${response.installation}
+## Usage Information 
+  ${response.usage}
+## Contribution Guidelines
+  ${response.contribution}
+## Test Instructions:
+  ${response.test}`
         return fs.writeFile('readme-template.md', data, (err) => err ? console.error(err) : console.log('Success!'));
     }
     )
