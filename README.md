@@ -5,7 +5,9 @@ This app will create a command-line application that dynamically generates a pro
 
 # walkthrough video link 
 
-walkthrough video: https://deepali-gtech.github.io/weather_dashboard
+walkthrough video: https://drive.google.com/file/d/1mxLWTrUib5H8c6l7_DGnsowSI09_409M/view
+
+
 
 ## Below is the screen short for terminal
 ![Website](./terminal.png)
