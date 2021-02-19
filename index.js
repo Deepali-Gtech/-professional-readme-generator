@@ -36,14 +36,14 @@ function init() {
         },
         {
           type: 'list',
-          name: 'license',
           message: 'Select your license type?',
           choices: ['ISC', 'MIT', 'IPA', 'NTP'],
+          name: 'license',
         },
         {
           type: 'input',
-          name: 'gitHub',
           message: 'Enter your GitHub username?',
+          name: 'gitHub',
         },
         {
           type: 'input',
