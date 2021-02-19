@@ -11,12 +11,12 @@ function init() {
         },
         {
             type: 'input',
-            message: ' Give brife description?',
+            message: 'Provide brife description?',
             name: 'description',
         },
         {
             type: 'input',
-            message: 'Give installation instructions?',
+            message: 'Provide installation instructions?',
             name: 'installation',
         },
         {
@@ -26,14 +26,31 @@ function init() {
         },
         {
             type: 'input',
-            message: ' Tell more about contribution guidelines?',
+            message: 'Tell more about contribution guidelines?',
             name: 'contribution',
         },
         {
             type: 'input',
             message: 'Provide test instructions?',
             name: 'test',
+        },
+        {
+          type: 'list',
+          name: 'license',
+          message: 'Select your license type?',
+          choices: ['ISC', 'MIT', 'IPA', 'NTP'],
+        },
+        {
+          type: 'input',
+          name: 'gitHub',
+          message: 'Enter your GitHub username?',
+        },
+        {
+          type: 'input',
+          name: 'email',
+          message: 'Contect me with additional questions on my email?',
         }
+
 
     ]).then(function (response) {
         var data =`# Title
@@ -43,7 +60,11 @@ function init() {
 2. [ Installation. ](#installation)
 3. [ Usage. ](#usage)
 4. [ Contribution. ](#contribution)  
-5. [ Test. ](#test)  
+5. [ Test. ](#test)
+6. [ license. ](#license)
+7. [ gitHub. ](#gitHub)
+8. [ email. ](#email) 
+
 
 ## Description 
   ${response.description}
@@ -54,7 +75,13 @@ function init() {
 ## Contribution
   ${response.contribution}
 ## Test
-  ${response.test}`
+  ${response.test}
+## license
+  ${response.license}
+## gitHub
+https://github.com/${response.gitHub}
+## email
+  ${response.email}`
         return fs.writeFile('readme-template.md', data, (err) => err ? console.error(err) : console.log('Success!'));
     }
     )
