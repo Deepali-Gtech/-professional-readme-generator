@@ -1,11 +1,12 @@
+## License
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-
-# professional-readme-generator
+# Professional-readme-generator
 This app will create a command-line application that dynamically generates a professional README.md file from a user's input using the Inquirer package.
 
 # walkthrough video link 
 
-walkthrough video: https://drive.google.com/file/d/1mxLWTrUib5H8c6l7_DGnsowSI09_409M/view
+Walkthrough video: https://drive.google.com/file/d/1mxLWTrUib5H8c6l7_DGnsowSI09_409M/view
 
 
 
@@ -17,7 +18,7 @@ walkthrough video: https://drive.google.com/file/d/1mxLWTrUib5H8c6l7_DGnsowSI09_
 
 ## Below is the screen short for the created README file
 
-![Website](./readme.png)
+![Website](./read_me.png)
 
 
 ## Technologies used

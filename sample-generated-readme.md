@@ -1,3 +1,5 @@
+ ## License
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 # Title
   ReadMe Generator 
 # Table of Contents
@@ -6,9 +8,9 @@
 3. [ Usage. ](#usage)
 4. [ Contribution. ](#contribution)  
 5. [ Test. ](#test)
-6. [ license. ](#license)
-7. [ gitHub. ](#gitHub)
-8. [ email. ](#email) 
+6. [ License. ](#license)
+7. [ GitHub. ](#gitHub)
+8. [ Email. ](#email) 
 
 
 ## Description 
@@ -18,12 +20,11 @@
 ## Usage 
   Execute node index.js and follow the prompts.
 ## Contribution
-  This is Open-source project, we welcome and encourage the community to submit patches directly to the project.
+  Open-source project, we welcome and encourage the community to submit patches directly to the project.
 ## Test
   Once node index.js executed, given input of prompts must be added in the readme-template file.
-## license
-  MIT
-## gitHub
+
+## GitHub
 https://github.com/deepali-gtech
-## email
-  abc@gmail.com
+## Email
+  deepaligarg.chd@gmail.com
