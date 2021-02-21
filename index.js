@@ -1,5 +1,11 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
+const licenses = { 
+  "ISC": "![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)",  
+  "MIT": "![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)"  ,
+  "Apache": "![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)",
+  "GNU GPL v3": "![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)"
+};
 
 function init() {
     inquirer.prompt([
@@ -36,7 +42,7 @@ function init() {
         {
           type: 'list',
           message: 'Select your license type?',
-          choices: ['ISC', 'MIT', 'IPA', 'NTP'],
+          choices: ['ISC', 'MIT', 'Apache', 'GNU GPL v3'],
           name: 'license',
         },
         {
@@ -52,7 +58,9 @@ function init() {
 
 
     ]).then(function (response) {
-        var data =`# Title
+        var data =` ## License
+${licenses[response.license]}
+# Title
   ${response.title}
 # Table of Contents
 1. [ Description. ](#description)
@@ -60,9 +68,9 @@ function init() {
 3. [ Usage. ](#usage)
 4. [ Contribution. ](#contribution)  
 5. [ Test. ](#test)
-6. [ license. ](#license)
-7. [ gitHub. ](#gitHub)
-8. [ email. ](#email) 
+6. [ License. ](#license)
+7. [ GitHub. ](#gitHub)
+8. [ Email. ](#email) 
 
 
 ## Description 
@@ -75,11 +83,10 @@ function init() {
   ${response.contribution}
 ## Test
   ${response.test}
-## license
-  ${response.license}
-## gitHub
+
+## GitHub
 https://github.com/${response.gitHub}
-## email
+## Email
   ${response.email}`
         return fs.writeFile('readme-template.md', data, (err) => err ? console.error(err) : console.log('Success!'));
     }
